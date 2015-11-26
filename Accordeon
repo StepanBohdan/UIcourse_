@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="accordeon">
+		<dl>
+			<dt>Title</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia reiciendis ullam consectetur ea corrupti eveniet quam, repellendus cum, earum consequuntur doloribus praesentium est suscipit nam voluptate provident explicabo asperiores fugit.</dd>
+		</dl>
+		<dl>
+			<dt>Title2</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt molestiae harum illo quasi, odit, iusto dolorem ab placeat quis nam velit voluptate dolorum eligendi quas laudantium, facilis accusamus tenetur commodi.</dd>
+		</dl>
+		<dl>
+			<dt>Title3</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt molestiae harum illo quasi, odit, iusto dolorem ab placeat quis nam velit voluptate dolorum eligendi quas laudantium, facilis accusamus tenetur commodi.</dd>
+		</dl>
+		<dl>
+			<dt>Title4</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt molestiae harum illo quasi, odit, iusto dolorem ab placeat quis nam velit voluptate dolorum eligendi quas laudantium, facilis accusamus tenetur commodi.</dd>
+		</dl>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(".accordeon dd").hide().prev().click(function() {
+			$(".accordeon dd").not(this).slideUp();
+			$(this).next().not(":visible").slideDown();
+		});
+	})</script>
+</body>
+</html>
